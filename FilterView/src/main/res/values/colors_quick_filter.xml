@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 文字 -->
+    <color name="qf_text_primary">#FF1A1A1A</color>
+    <color name="qf_text_white">#FFFFFFFF</color>
+
+    <!-- 按钮/背景 -->
+    <color name="qf_btn_confirm_bg">#FF4A90D9</color>
+    <color name="qf_sheet_bg">#FFF5F5F5</color>
+
+    <!-- 选项 -->
+    <color name="qf_option_bg_selected">#FF4A90D9</color>
+    <color name="qf_option_bg_normal">#FFE8E8E8</color>
+
+    <!-- 关闭按钮 -->
+    <color name="qf_close_icon">#FF999999</color>
+</resources>
