@@ -423,13 +423,11 @@ public class MultiFilterView extends FrameLayout {
         );
     }
 
+    // ① handleOptionClick：已选中的不处理
     private void handleOptionClick(int groupIndex, int position) {
         int currentSelected = mSelectedPositions.get(groupIndex);
-        if (currentSelected == position) {
-            mSelectedPositions.set(groupIndex, -1);
-        } else {
-            mSelectedPositions.set(groupIndex, position);
-        }
+        if (currentSelected == position) return;
+        mSelectedPositions.set(groupIndex, position);
         refreshOptionsUI();
         updateTriggerText();
     }
@@ -440,9 +438,10 @@ public class MultiFilterView extends FrameLayout {
         buildGroups();
     }
 
+    // ② handleReset：重置回第一个（而不是 -1）
     private void handleReset() {
         for (int i = 0; i < mSelectedPositions.size(); i++) {
-            mSelectedPositions.set(i, -1);
+            mSelectedPositions.set(i, 0);
         }
         refreshOptionsUI();
         updateTriggerText();
